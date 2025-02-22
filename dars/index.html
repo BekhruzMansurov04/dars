@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>CRUD App</h2>
+
+    <div class="form-container">
+      <input type="text" id="name" placeholder="Enter Name" />
+      <input type="text" id="surname" placeholder="Enter Surname" />
+      <input type="number" id="ball" placeholder="Enter Ball" />
+      <button onclick="addData()">Add</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Ball</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="dataTable"></tbody>
+    </table>
+
+    <div class="modal" id="editModal">
+      <div class="modal-content">
+        <h3>Edit Data</h3>
+        <input type="text" id="editName" />
+        <input type="text" id="editSurname" />
+        <input type="number" id="editBall" />
+        <button onclick="saveEdit()">Save</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
